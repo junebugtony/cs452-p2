@@ -49,7 +49,7 @@ extern "C"
      *
      * @param q The queue
      */
-   void queue_shutdown(queue_t q);
+    void queue_shutdown(queue_t q);
 
     /**
      * @brief Returns true is the queue is empty
