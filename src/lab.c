@@ -95,10 +95,6 @@ void queue_shutdown(queue_t q) {
 
     pthread_cond_broadcast(&q->cond);
 
-    while (q->size > 0) {
-        pthread_cond_wait(&q->cond, &q->lock);
-    }
-
     pthread_mutex_unlock(&q->lock);
 }
 
